@@ -1,5 +1,5 @@
 import { FormControl, Card, InputGroup } from "react-bootstrap";
-
+import ListMonster from "../ListMonster/ListMonster";
 const MonsterShop = () => {
   return (
     <Card className="text-center">
@@ -22,7 +22,9 @@ const MonsterShop = () => {
           </InputGroup>
         </div>
         <br />
-        <div></div>
+        <div>
+          <ListMonster />
+        </div>
       </Card.Body>
     </Card>
   );
