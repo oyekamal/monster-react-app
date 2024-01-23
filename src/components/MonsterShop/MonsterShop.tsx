@@ -1,6 +1,6 @@
 import { FormControl, Card, InputGroup } from "react-bootstrap";
 
-const ListMonster = () => {
+const MonsterShop = () => {
   return (
     <Card className="text-center">
       <Card.Header>
@@ -28,4 +28,4 @@ const ListMonster = () => {
   );
 };
 
-export default ListMonster;
+export default MonsterShop;
