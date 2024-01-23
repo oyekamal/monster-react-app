@@ -1,14 +1,4 @@
-import {
-  Container,
-  FormControl,
-  Card,
-  InputGroup,
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  Button,
-} from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 const Footer = () => {
   return (

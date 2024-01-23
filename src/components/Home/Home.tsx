@@ -1,4 +1,3 @@
-import React from "react";
 import NavigationBar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import ListMonster from "../ListMonster/ListMonster";
