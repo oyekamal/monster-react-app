@@ -1,17 +1,28 @@
 import { FormControl, Card, InputGroup } from "react-bootstrap";
 import ListMonster from "../ListMonster/ListMonster";
+import fetchData from "../../api/get";
+import { useRef, useState, useEffect } from "react";
+
 const MonsterShop = () => {
+  const [apidata, setApidata] = useState([]);
+
+  // this useeffect is called when component is mounted or loaded
+  useEffect(() => {
+    const url = "https://jsonplaceholder.typicode.com/users";
+    fetchData(url, setApidata);
+  }, []);
+
   return (
-    <Card className="text-center">
-      <Card.Header>
+    <div className="text-center">
+      <div>
         <h1>Monster Shop</h1>
-      </Card.Header>
-      <Card.Body>
-        <Card.Title>We sell every type of Monster here</Card.Title>
-        <Card.Text>
+      </div>
+      <div>
+        <div>We sell every type of Monster here</div>
+        <div>
           for all type of needs, we got you covered from stronge to cute any
           type.
-        </Card.Text>
+        </div>
         <div>
           <InputGroup className="mb-3">
             <FormControl
@@ -23,10 +34,10 @@ const MonsterShop = () => {
         </div>
         <br />
         <div>
-          <ListMonster />
+          <ListMonster monster_data={apidata} />
         </div>
-      </Card.Body>
-    </Card>
+      </div>
+    </div>
   );
 };
 
