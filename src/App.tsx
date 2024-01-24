@@ -1,9 +1,8 @@
 import { Container } from "react-bootstrap";
 
-import Home from "./Container/Home/Home";
-import NavigationBar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-
+import Home from "./Container/Home";
+import NavigationBar from "./components/Navbar";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
