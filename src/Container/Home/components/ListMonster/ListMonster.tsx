@@ -42,7 +42,7 @@ const ListMonster = ({ monster_data }: propes) => {
                     {monster.website}
                   </li>
                   <li className="display-28">
-                    <span class="display-26 text-secondary me-2 font-weight-600">
+                    <span className="display-26 text-secondary me-2 font-weight-600">
                       Phone:
                     </span>{" "}
                     {monster.phone}
