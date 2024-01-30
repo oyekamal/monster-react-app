@@ -1,16 +1,32 @@
 import { FormControl, Card, InputGroup } from "react-bootstrap";
 import ListMonster from "../ListMonster/ListMonster";
-import fetchData from "../../api/get";
+// import fetchData from "../../api/get";
 import { useRef, useState, useEffect } from "react";
 
 const MonsterShop = () => {
   const [apidata, setApidata] = useState([]);
   const [display, setDisplay] = useState([]);
   const inputRef = useRef();
+
+  const fetchData = async (url: string) => {
+    try {
+      const response = await fetch(url);
+      const json = await response.json();
+      // console.log(json);
+      // console.log("--------------------------------");
+      setApidata(json);
+      setDisplay(json);
+      // return json;
+    } catch (error) {
+      console.log("error", error);
+      // return [];
+    }
+  };
+
   // this useeffect is called when component is mounted or loaded
   useEffect(() => {
     const url = "https://jsonplaceholder.typicode.com/users";
-    fetchData(url, setApidata);
+    fetchData(url);
     setDisplay(apidata);
   }, []);
 
